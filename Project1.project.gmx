@@ -33,12 +33,16 @@
     <object>objects\obj_player</object>
     <object>objects\obj_spacejunk</object>
     <object>objects\spr_laser</object>
+    <object>objects\obj_start</object>
+    <object>objects\menu_player</object>
+    <object>objects\obj_player_drg</object>
+    <object>objects\spr_player_prj</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu_Screen</room>
+    <room>rooms\rm_tutorial</room>
+    <room>rooms\rm_gameplay</room>
     <room>rooms\room0</room>
-    <room>rooms\Gameplay</room>
-    <room>rooms\Tutorial</room>
-    <room>rooms\Menu_Screen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
