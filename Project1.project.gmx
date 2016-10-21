@@ -37,6 +37,7 @@
     <object>objects\menu_player</object>
     <object>objects\obj_player_drg</object>
     <object>objects\spr_player_prj</object>
+    <object>objects\obj_enemies</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_Screen</room>
