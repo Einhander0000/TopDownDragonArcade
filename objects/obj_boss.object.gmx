@@ -49,7 +49,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>10</string>
+            <string>200</string>
           </argument>
         </arguments>
       </action>
@@ -115,7 +115,7 @@
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -198,17 +198,27 @@
     <event eventtype="4" ename="obj_player_projectile">
       <action>
         <libid>1</libid>
-        <id>203</id>
+        <id>211</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
+        <functionname>action_sound</functionname>
         <codestring></codestring>
-        <whoName>other</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>organicdeath2</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -252,45 +262,43 @@
       </action>
       <action>
         <libid>1</libid>
-        <id>211</id>
+        <id>203</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_sound</functionname>
+        <functionname>action_kill_object</functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>organicdeath2</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>721</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_health</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>-1</string>
+            <kind>1</kind>
+            <string>health -= 1; 
+
+
+if(health &lt;= 0)
+{
+    instance_destroy();
+    room_goto(rm_lvl1_complete);
+}
+</string>
           </argument>
         </arguments>
       </action>
